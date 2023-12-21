@@ -27,7 +27,7 @@ def btn_click():
         if index in correct_options_q6:
             mark += 2
 
-    if mark > 7:
+    if mark > 10:
         lbl5["fg"] = "green"
     else:
         lbl5["fg"] = "red"
@@ -95,7 +95,7 @@ qstn6 = Label(tk, text="Оберіть зайве:", font=font_q)
 listbox_options_q6 = ["Процесор", "Флеш-накопичувач", "Відеокарта", "Жорсткий диск", "Материнська плата", "Блок живлення"]
 
 listbox_var_q6 = StringVar()
-listbox_q6 = Listbox(tk, listvariable=listbox_var_q6, selectmode=MULTIPLE, height=len(listbox_options_q6))
+listbox_q6 = Listbox(tk, listvariable=listbox_var_q6, selectmode=SINGLE, height=len(listbox_options_q6))
 
 # Set the list of options for the listbox_var_q6
 listbox_var_q6.set(tuple(listbox_options_q6))
